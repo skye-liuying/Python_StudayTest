@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#! -*- coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 
 import requests
 
@@ -19,4 +19,20 @@ class Common(object):
             res = requests.post(url,data=params)
         else :
             res = requests.post(url)
+        return res
+    #封装put方法
+    def put(self,uri,params=None):
+        url = self.url_root + uri
+        if params is not None:
+            res = requests.put(url,data=params)
+        else :
+            res = requests.put(url)
+        return res
+    #封装delete方法
+    def delete(self,uri,params=None):
+        url = self.url_root + uri
+        if params is not None:
+            res = requests.delete(url,data=params)
+        else :
+            res = requests.delete(url)
         return res

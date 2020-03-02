@@ -4,7 +4,7 @@
 from portTest.common import Common
 
 uri_index = '/'
-comm = Common('http://127.0.0.1:12356')
+comm = Common('http://127.0.0.1:12356','http')
 #访问主页
 response_index = comm.get(uri_index)
 print('Response内容：' + response_index.text)
